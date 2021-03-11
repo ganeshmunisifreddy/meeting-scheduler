@@ -1,0 +1,98 @@
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px 10px;
+}
+
+.container > h2 {
+  text-align: center;
+}
+
+.form-wrapper {
+  margin-top: 24px;
+  padding: 20px;
+  /* mix-blend-mode: difference; */
+  font-weight: bold;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  background: #ffffff2e;
+  box-shadow: 0 2px 30px #3333337d;
+}
+
+.form-fields {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-fields > .field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.form-fields .field > label {
+  margin-bottom: 10px;
+}
+
+.form-fields .field > input {
+  border: 1px solid #f3f3f3;
+  border-bottom-width: 2px;
+  outline: none;
+  background: transparent;
+  color: #f3f3f3;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-fields .field > input:disabled {
+  background: #bec6e5;
+  color: #333;
+  border: none;
+  cursor: not-allowed;
+}
+
+.btn-section {
+  text-align: center;
+}
+
+.btn-section > button {
+  border: 0;
+  background: #333333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px #3751bb;
+  color: #f3f3f3;
+  font-weight: bold;
+}
+
+.btn-section > button:hover {
+  box-shadow: 0 2px 25px #481a90;
+}
+
+.btn-section > button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #949494;
+  color: #bbb;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  .form-fields {
+    flex-direction: column;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

@@ -1,0 +1,20 @@
+<div class="meet-list">
+  <div class="meet-list-item" *ngFor="let meet of meetings">
+    <div class="column">
+      <span class="material-icons"> event </span> {{ meet.start | date }}
+    </div>
+    <div class="column">
+      <span class="material-icons">schedule</span
+      >{{ meet.start | date: "shortTime" }} - {{ meet.end | date: "shortTime" }}
+    </div>
+    <div class="column">
+      <span class="material-icons">timelapse</span
+      >{{ getDuration(meet.start, meet.end) }}
+    </div>
+    <div class="actions align-center">
+      <span class="delete material-icons" (click)="removeSlot(meet.id)"
+        >delete</span
+      >
+    </div>
+  </div>
+</div>
